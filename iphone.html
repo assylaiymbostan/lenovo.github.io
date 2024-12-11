@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lenovo Store</title>
+    <link rel="stylesheet" href="iphone.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">Lenovo</div>
+        </div>
+    </header>
+    
+    <!-- Top Header -->
+    <header class="top-header">
+        <div class="container">
+            <div class="top-left">
+                <a href="#">Корпоративные продажи</a>
+                <a href="#">Доставка и оплата</a>
+                <a href="#">Обмен и возврат</a>
+                <a href="#">Поддержка и гарантия</a>
+            </div>
+            <div class="top-right">
+                <a href="#">қаз</a>
+                <a href="#">рус</a>
+                <span class="phone">+7 (702) 036-61-80</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">Lenovo</div>
+            <div class="city-select">
+                <span>Ваш город:</span>
+                <select id="city">
+                    <option value="Астана">Астана</option>
+                    <option value="Алматы">Алматы</option>
+                    <option value="Актау">Актау</option>
+                    <option value="Шымкент">Шымкент</option>
+                </select>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Поиск...">
+                <button>Поиск</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="#">Каталог</a></li>
+                <li><a href="#">Ноутбуки</a></li>
+                <li><a href="#">Планшеты</a></li>
+                <li><a href="#">Компьютеры</a></li>
+                <li><a href="#">Моноблоки</a></li>
+                <li><a href="#">Мониторы</a></li>
+                <li><a href="#">Аксессуары</a></li>
+                <li><a href="#">Игровые приставки</a></li>
+                <li><a href="#">Подбор по параметрам</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Promo Section -->
+    <section class="main">
+        <div class="container">
+            <div class="promo">
+                <h2>Lenovo Legion 9i и мобильный процессор Intel Core™ i9 13 поколения</h2>
+                <p>За пределами производительности</p>
+                <button onclick="window.location.href='https://kaspi.kz';">Ноутбуки</button>
+
+            </div>
+            <div class="slider-container">
+                <div class="slider" id="slider">
+                    <div class="slide">
+                        <img src="photo.webp" alt="Slide 1">
+                    </div>
+                    <div class="slide">
+                        <img src="bcb2d440bd4cde0f53a5d4072c7dc756.webp" alt="Slide 2">
+                    </div>
+                    <div class="slide">
+                        <img src="ce16192e310e965b426959348c99b1be.webp" alt="Slide 3">
+                    </div>
+                </div>
+        
+                <div class="buttons">
+                    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+                </div>
+            </div>
+        
+        </div>
+    </section>
+
+    <!-- Product List Section -->
+    <div class="product-list">
+        <div class="product-item">Ноутбуки</div>
+        <div class="product-item">Планшеты</div>
+        <div class="product-item">Компьютеры</div>
+        <div class="product-item">Моноблоки</div>
+        <div class="product-item">Мониторы</div>
+        <div class="product-item">Игровые приставки</div>
+    </div>
+
+    <!-- Notebook Series Section -->
+    <div class="notebook-series">
+        <div class="series">
+            <img src="1.webp" alt="ThinkPad X1" />
+            <h2><a href="https://shop.lenovo.kz/laptops/thinkpad/series_thinkpad-x1/" target="_blank">ThinkPad X1</a></h2>
+            <p>Невероятная легкость. Невероятная производительность.</p>
+            <p class="price">от 1 910 090 ₸</p>
+        </div>
+        <div class="series">
+            <img src="2.webp" alt="Lenovo V" />
+            <h2><a href="https://shop.lenovo.kz/laptops/lenovo-v/" target="_blank">Lenovo V</a></h2>
+            <p>Простые бизнес-решения</p>
+            <p class="price">от 399 990 ₸</p>
+        </div>
+        <div class="series">
+            <img src="3.webp" alt="ThinkPad E" />
+            <h2><a href="https://shop.lenovo.kz/laptops/thinkpad/series_thinkpad-e/" target="_blank">ThinkPad E</a></h2>
+            <p>Устройства для бизнеса с запоминающимся дизайном</p>
+            <p class="price">от 823 690 ₸</p>
+        </div>
+        <div class="series">
+            <img src="4.webp" alt="ThinkBook" />
+            <h2><a href="https://shop.lenovo.kz/laptops/thinkbook/" target="_blank">ThinkBook</a></h2>
+            <p>Эффективное решение для бизнеса</p>
+            <p class="price">от 547 090 ₸</p>
+        </div>
+    </div>
+
+    <!-- Tablets and Smartphones Section -->
+    <section class="tablets">
+        <div class="container">
+            <h2>Планшеты и смартфоны</h2>
+            <div class="products">
+                <div class="product">
+                    <img src="1 (1).webp" alt="Tablet 1">
+                    <p>Планшет Lenovo Tab P12 Storm Grey (ZACH0135RU)</p>
+                    <span>311 890 ₸</span>
+                    <button>В корзину</button>
+                </div>
+                <div class="product">
+                    <img src="01_Tab_P12_Spruce_Tour_Front.webp" alt="Tablet 2">
+                    <p>Планшет Lenovo Tab M10 Plus (ZACH0123RU)</p>
+                    <span>211 890 ₸</span>
+                    <button>В корзину</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="feature-item">
+                <h3>Надёжность</h3>
+                <p>Все системы Lenovo соответствуют жестким требованиям стандартов надежности и проходят нагрузочные испытания для определения стойкости к внешним воздействиям.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Инновации</h3>
+                <p>Компания Lenovo является обладателем более 100 международных наград за внедрение инновационных конструктивных решений.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Поддержка</h3>
+                <p>Компания Lenovo обладает разветвленной сетью сервисных центров. Наши технические эксперты всегда готовы предоставить клиенту быструю и квалифицированную помощь.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Гарантия</h3>
+                <p>Все устройства, приобретаемые в нашем интернет-магазине, имеют официальную гарантию Lenovo на территории Казахстана.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Официальный интернет-магазин Lenovo в Казахстане</h3>
+                <p>Lenovo – известная международная компания, занимающаяся производством компьютерной и мобильной техники, электроники и аксессуаров. Данный бренд входит в пятёрку крупнейших производителей ПК и смартфонов, продукция которого поставляется в большинство стран мира, включая Казахстан.</p>
+                <a href="#">Читать дальше</a>
+            </div>
+            <div class="footer-section">
+                <h3>Узнавайте первым о новинках и специальных предложениях</h3>
+                <p>Подпишитесь на рассылку от Lenovo</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Ваш E-mail" required>
+                    <button type="submit">Подписаться</button>
+                </form>
+                <p>Нажимая на кнопку вы соглашаетесь с <a href="#">Политикой конфиденциальности</a></p>
+            </div>
+        </div>
+    </footer>
+<script> let currentSlide = 0;
+
+    function moveSlide(step) {
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        currentSlide = (currentSlide + step + totalSlides) % totalSlides;
+        const slider = document.getElementById('slider');
+        slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }</script>
+</body>
+</html>

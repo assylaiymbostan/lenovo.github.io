@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ноутбук ThinkPad X1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .product-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .slider {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 300%;
+            height: 300%;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slides img {
+            width: 50%;
+            flex-shrink: 0;
+            height: 50%;
+        }
+
+        .navigation {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .navigation button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .navigation button:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .product-info {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .product-info h1 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        .product-info button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .product-info button:hover {
+            background-color: #0056b3;
+        }
+        .product-section {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+@media (max-width: 768px) {
+    .product-section {
+        padding: 10px;
+    }
+}
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #333;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+    .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo img {
+    max-height: 40px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav ul li {
+    margin: 0 15px;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-bar button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 5px;
+    border-radius: 4px;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+.submenu {
+    background-color: #f5f5f5;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.submenu ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.submenu ul li {
+    margin-right: 20px;
+}
+
+.submenu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.column {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.column ul li {
+    margin-bottom: 10px;
+}
+
+.column ul li a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.column ul li a:hover {
+    text-decoration: underline;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.card p {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.footer {
+    background-color: #333; /* Сұр түс */
+    color: #fff; /* Ақ мәтін */
+    padding: 20px 40px;
+    font-size: 14px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.footer-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-content ul li {
+    margin-bottom: 10px;
+}
+
+.footer-content ul li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-content ul li a:hover {
+    color: #fff; /* Ақ түске өзгереді */
+    text-decoration: underline;
+}
+
+.social-media p,
+.country-selector p,
+.footer-bottom p {
+    margin: 0 0 10px;
+}
+
+.country-selector select {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #555;
+    padding-top: 10px;
+}
+
+.footer-bottom a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+
+</style>
+</head>
+<header class="header">
+  <div class="logo">
+      <img src="c:\Users\Lenovo\Desktop\Asyl\h82es5y402b4rh1089sf86ay7n9sdl721044.avif" alt="Lenovo Logo" />
+  </div>
+  
+  <nav class="main-nav">
+      <ul>
+          <li><a href="#">Настольные ПК и Ноутбуки</a></li>
+          <li><a href="#">Серверы и СХД</a></li>
+          <li><a href="#">Услуги и Решения</a></li>
+          <li><a href="#">Поддержка</a></li>
+          <li><a href="#">О Lenovo</a></li>
+      </ul>
+  </nav>
+  <div class="search-bar">
+      <input type="text" placeholder="Что вы ищете сегодня?" />
+      <button>🔍</button>
+  </div>
+</header>
+<section class="submenu">
+  <ul>
+      <li><a href="#">Ноутбуки</a></li>
+      <li><a href="#">Десктопы</a></li>
+      <li><a href="#">Станции</a></li>
+      <li><a href="#">Планшеты</a></li>
+      <li><a href="#">Мониторы</a></li>
+      <li><a href="#">Геймерам</a></li>
+      <li><a href="#">Аксессуары</a></li>
+      <li><a href="#">Умные Устройства</a></li>
+      <li><a href="#">AI</a></li>
+  </ul>
+</section>
+<section class="content">
+  <div class="column">
+      <h2>Настольные ПК и моноблоки</h2>
+      <ul>
+          <li><a href="#">Все ПК и моноблоки</a></li>
+          <li><a href="#">Компактная серия Tiny</a></li>
+          <li><a href="#">Для игр</a></li>
+      </ul>
+  </div>
+  <div class="column">
+      <h2>Выбрать бренд</h2>
+      <ul>
+          <li><a href="#">ThinkCentre</a></li>
+          <li><a href="#">IdeaCentre</a></li>
+          <li><a href="#">Legion</a></li>
+          <li><a href="#">LOQ Desktops</a></li>
+      </ul>
+  </div>
+  <div class="cards">
+      <div class="card">
+          <img src="c:\Users\Lenovo\Desktop\Asyl\lenovo-intel-vpro-evo-edition-intel-core-ultra-7-badge.webp" alt="Legion Desktop">
+          <p>Игровые настольные ПК Lenovo Legion</p>
+      </div>
+      <div class="card">
+          <img src="c:\Users\Lenovo\Desktop\Asyl\ru-logo.avif" alt="ThinkCentre Desktop">
+          <p>ThinkCentre: Премиальное качество</p>
+      </div>
+  </div>
+</section>
+<body>
+    <div class="container">
+        <div class="product-header">
+            <div class="slider">
+                <div class="slides" id="slides">
+                    <img src="c:/Users/Lenovo/Desktop/Asyl/5.webp" alt="Ноутбук ThinkPad X1" width="50px" height="50px">
+                    <img src="c:/Users/Lenovo/Desktop/Asyl/6.avif" alt="Image 1">
+                    <img src="c:/Users/Lenovo/Desktop/Asyl/7.avif" alt="Image 2">
+                    <img src="c:/Users/Lenovo/Desktop/Asyl/8.avif" alt="Image 3">
+                    <img src="c:/Users/Lenovo/Desktop/Asyl/9.webp" alt="Image 4">
+                </div>
+                <div class="navigation">
+                    <button id="prev">&laquo; Алдыңғы</button>
+                    <button id="next">Келесі &raquo;</button>
+                </div>
+            </div>
+        </div>
+        <div class="product-info">
+            <h1>Ноутбук ThinkPad X1 «2-в-1» (9th Gen, 14, Intel)</h1>
+            <button>Где купить</button>
+        </div>
+    </div>
+
+    <script>
+        const slides = document.getElementById('slides');
+        const prev = document.getElementById('prev');
+        const next = document.getElementById('next');
+        let index = 0;
+
+        const updateSlider = () => {
+            slides.style.transform = `translateX(${-index * 100}%)`;
+        };
+
+        next.addEventListener('click', () => {
+            index = (index + 1) % slides.children.length;
+            updateSlider();
+        });
+
+        prev.addEventListener('click', () => {
+            index = (index - 1 + slides.children.length) % slides.children.length;
+            updateSlider();
+        });
+    </script>
+     <div class="features">
+      <h2>Основные характеристики</h2>
+      <ul>
+          <li>Все в одном: 14-дюймовый ноутбук, планшет, блокнот для заметок и многое другое, с магнитным стилусом в комплекте.</li>
+          <li>Выполнение ресурсоемких рабочих нагрузок даже без подключения к электросети благодаря процессору Intel® Core™ Ultra с поддержкой ИИ.</li>
+          <li>Время автономной работы в течение всего дня, мгновенный выход из спящего режима, поддержка Intel® Unison™ на платформе Intel® Evo™ Edition.</li>
+      </ul>
+  </div>
+</div>
+<header>
+  <h1>Ноутбук ThinkPad X1 «2-в-1» (9th Gen, 14, Intel)</h1>
+</header>
+<nav>
+  <ul>
+      <li><a href="#functions">Функции</a></li>
+      <li><a href="#specs">Технические характеристики</a></li>
+      <li><a href="#ports">Порты и разъемы</a></li>
+  </ul>
+</nav>
+<section id="functions">
+  <h2>Пусть искусственный интеллект работает на вас</h2>
+  <div class="content">
+      <div class="text">
+          <p>
+              Благодаря процессору Intel® Core™ Ultra и поддержке технологий ИИ, ноутбук ThinkPad X1 выводит работу на новый уровень. Оцените производительность, оптимизацию энергии и многозадачность.
+          </p>
+      </div>
+      <img src="c:\Users\Lenovo\Desktop\Asyl\11.avif" alt="Ноутбук ThinkPad X1" >
+  </div>
+</section>
+<section id="cooling">
+  <h2>Не допускает перегрева</h2>
+  <div class="content">
+      <img src="c:\Users\Lenovo\Desktop\Asyl\caqs1cskxq1zogc2bvou8lblvwuf09813272.avif" alt="Система охлаждения">
+      <p>
+          Запускайте самые ресурсоемкие нагрузки без перегрева. Улучшенная система охлаждения работает тихо и эффективно.
+      </p>
+  </div>
+</section>
+<section id="creativity">
+  <h2>Вдохновение для творчества</h2>
+  <div class="content">
+      <div class="text">
+          <p>
+              ThinkPad X1 «2-в-1» предлагает удобное крепление стилуса Lenovo Slim Pen, который всегда под рукой. Записывайте заметки и создавайте эскизы с максимальной точностью.
+          </p>
+      </div>
+      <img src="c:\Users\Lenovo\Desktop\Asyl\9gtuxa4xxmg4d4xbnqtv3dns332jrl343872.webp" alt="Lenovo Slim Pen">
+  </div>
+</section>
+</div>
+
+
+<footer class="footer">
+  <div class="footer-content">
+      <div class="social-media">
+          <p>Facebook | Twitter | Instagram | Youtube</p>
+      </div>
+      <div class="country-selector">
+          <p>Выберите страну/регион:</p>
+          <select>
+              <option>KAZAKHSTAN</option>
+              <option>RUSSIA</option>
+              <option>USA</option>
+          </select>
+      </div>
+      <div class="about-lenovo">
+          <p><strong>О LENOVO</strong></p>
+          <ul>
+              <li><a href="https://www.lenovo.com/kz/ru/about/">О Lenovo</a></li>
+              <li><a href="https://news.lenovo.com/">Новости</a></li>
+              <li><a href="#">Отношения с инвесторами</a></li>
+              <li><a href="#">ESG</a></li>
+              <li><a href="#">Правовая информация</a></li>
+              <li><a href="#">Вакансии в Lenovo</a></li>
+              <li><a href="#">Партнерство с Формулой 1</a></li>
+              <li><a href="#">Lenovo Go</a></li>
+          </ul>
+      </div>
+      <div class="products-services">
+          <p><strong>ПРОДУКТЫ И УСЛУГИ</strong></p>
+          <ul>
+              <li><a href="#">Ноутбуки</a></li>
+              <li><a href="#">Настольные ПК</a></li>
+              <li><a href="#">Рабочие станции</a></li>
+              <li><a href="#">Планшеты</a></li>
+              <li><a href="#">Интеллектуальные устройства</a></li>
+              <li><a href="#">Cерверы и СХД</a></li>
+              <li><a href="#">Услуги Lenovo</a></li>
+              <li><a href="#">Smarter AI for You</a></li>
+          </ul>
+      </div>
+      <div class="resources">
+          <p><strong>РЕСУРСЫ</strong></p>
+          <ul>
+              <li><a href="#">Где купить технику Lenovo</a></li>
+              <li><a href="#">Свяжитесь с нами</a></li>
+              <li><a href="#">Сервисные центры</a></li>
+              <li><a href="#">Изъятие продукта</a></li>
+              <li><a href="#">Форумы</a></li>
+              <li><a href="#">Поддержка</a></li>
+          </ul>
+      </div>
+      <div class="footer-bottom">
+          <p>© 2024 Lenovo. Все права защищены.</p>
+          <p><a href="#">Конфиденциальность</a> | <a href="#">Карта сайта</a> | <a href="#">Правила использования</a></p>
+      </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,802 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: #f5f5f5;
+    padding: 10px 0;
+}
+
+.header .logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+    display: inline-block;
+}
+
+.header nav ul {
+    list-style: none;
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.header nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+
+.main {
+    background-color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.main .promo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.main button {
+    padding: 10px 20px;
+    background-color: #e60012;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.main button:hover {
+    background-color: #c1000d;
+}
+
+.tablets {
+    padding: 40px 0;
+    background-color: #fff;
+}
+
+.tablets h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.product {
+    text-align: center;
+    display: inline-block;
+    width: 200px;
+    margin: 10px;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+.product span {
+    font-size: 18px;
+    color: #333;
+}
+
+.product button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #e60012;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.product button:hover {
+    background-color: #c1000d;
+}
+
+.footer {
+    background-color: #f5f5f5;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+.series h2 a {
+    text-decoration: none;
+    color: #333;
+}
+
+.series h2 a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+.notebook-series {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 20px;
+}
+
+.series {
+    background-color: rgb(80, 190, 155);
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    width: calc(25% - 15px); /* Четыре блока в ряд */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.series img {
+    max-width: 100%; /* Изображение занимает всю ширину блока */
+    height: auto;
+    margin-bottom: 10px; /* Отступ между изображением и текстом */
+}
+
+.series h2 a {
+    text-decoration: none;
+    color: #333;
+}
+
+.series h2 a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.price {
+    font-weight: bold;
+    color: #d9534f;
+    font-size: 1.1em;
+}
+.container {
+    max-width: 1200px; /* Ограничение ширины контейнера */
+    margin: 0 auto; /* Центрирование секции */
+    padding: 20px;
+}
+
+h2 {
+    text-align: center; /* Центровка заголовка */
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.products {
+    display: flex; /* Устанавливает флексбокс для продуктов */
+    gap: 20px; /* Расстояние между продуктами */
+    justify-content: center; /* Центрирует все продукты в строке */
+    flex-wrap: wrap; /* Разрешает перенос на следующую строку, если не хватает места */
+    
+}
+
+.product {
+    border: 1px solid #e0e0e0; /* Граница вокруг продукта */
+    border-radius: 8px; /* Закругленные углы */
+    padding: 15px;
+    text-align: center;
+    width: calc(25% - 20px); /* Ширина каждого продукта (25% от строки) */
+    background-color: #f9f9f9; /* Светлый фон */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    transition: transform 0.3s; /* Анимация при наведении */
+    
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.product p {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.product span {
+    display: block;
+    font-weight: bold;
+    color: #d9534f;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.product button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product button:hover {
+    background-color: #0056b3;
+}
+
+.product:hover {
+    transform: translateY(-5px); /* Легкое поднятие блока при наведении */
+}
+.container {
+    max-width: 1100px; /* Ограничивает ширину контейнера */
+    margin: 0 auto; /* Центрирует секцию */
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.products {
+    display: flex; /* Выстраивает продукты в одну линию */
+    gap: 20px; /* Расстояние между продуктами */
+    flex-wrap: wrap; /* Перенос продуктов на следующую строку, если не хватает места */
+    justify-content: center; /* Центрирует продукты */
+}
+
+.product {
+    background-color: #f9f9f9; /* Светлый фон */
+    border: 1px solid #e0e0e0; /* Граница вокруг продукта */
+    border-radius: 8px; /* Закругленные углы */
+    padding: 15px;
+    text-align: center;
+    width: calc(25% - 20px); /* Каждый продукт занимает 25% строки с учетом отступов */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Мягкая тень */
+    transition: transform 0.3s ease-in-out; /* Анимация при наведении */
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.product p {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.product span {
+    display: block;
+    font-weight: bold;
+    color: #d9534f;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.product button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product button:hover {
+    background-color: #0056b3;
+}
+
+.product:hover {
+    transform: translateY(-5px); /* Легкое поднятие при наведении */
+}
+
+/* Базовые стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header */
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.header nav ul li {
+    display: inline;
+}
+
+.header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+.header nav ul li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* Main Section */
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+    background: #f9f9f9;
+}
+
+.main .promo {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.main .promo h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.main .promo p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.main .promo button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.main .promo button:hover {
+    background-color: #0056b3;
+}
+
+.main .image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Notebook Series */
+.notebook-series {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px 0;
+}
+
+.series {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    width: calc(25% - 20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.series:hover {
+    transform: translateY(-5px);
+}
+
+.series img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.series h2 a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2em;
+}
+
+.series p {
+    color: #555;
+    margin: 10px 0;
+}
+
+.series .price {
+    color: #d9534f;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* Tablets Section */
+.tablets .products {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.tablets .product {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    width: calc(25% - 20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.tablets .product:hover {
+    transform: translateY(-5px);
+}
+
+.tablets .product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.tablets .product p {
+    color: #555;
+    margin: 10px 0;
+}
+
+.tablets .product span {
+    color: #d9534f;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.tablets .product button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tablets .product button:hover {
+    background-color: #218838;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main .promo {
+        margin-right: 0;
+    }
+
+    .notebook-series, .tablets .products {
+        justify-content: center;
+    }
+
+    .series, .product {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .series, .product {
+        width: 100%;
+    }
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Верхний блок */
+.top-header {
+    background-color: #f4f4f4;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.top-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-header a {
+    text-decoration: none;
+    color: #333;
+    margin-right: 15px;
+    font-size: 0.9em;
+}
+
+.top-header .phone {
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Главное меню */
+.main-header {
+    background-color: #fff;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+}
+
+.main-header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+.city-select {
+    display: flex;
+    align-items: center;
+}
+
+.city-select span {
+    margin-right: 10px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.city-select select {
+    padding: 5px;
+    font-size: 0.9em;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 5px;
+    font-size: 0.9em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.search-bar button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+/* Меню навигации */
+.main-nav {
+    background-color: #333;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+    justify-content: center;
+    gap: 20px;
+}
+
+.main-nav ul li {
+    margin: 0;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.95em;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+.main-nav ul li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+.product-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Это позволяет элементам переноситься на следующую строку, если не хватает места */
+}
+.product-item {
+    font-size: 18px;
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Чтобы элементы переносились на новую строку на маленьких экранах */
+}
+.feature-item {
+    flex: 1 1 200px; /* Каждый элемент будет занимать не менее 200px */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    text-align: center;
+}
+.feature-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.feature-item p {
+    font-size: 16px;
+    color: #555;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+footer {
+    background-color: #2e2e2e;
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+}
+.footer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.footer-section {
+    padding: 10px;
+}
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.footer-section p,
+.footer-section a {
+    font-size: 14px;
+    color: #ccc;
+    text-decoration: none;
+}
+.footer-section a:hover {
+    text-decoration: underline;
+}
+.newsletter-form input {
+    padding: 10px;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.newsletter-form button {
+    padding: 10px 20px;
+    background-color: #0078d4;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+.newsletter-form button:hover {
+    background-color: #005c99;
+}
+.footer-bottom {
+    margin-top: 30px;
+    font-size: 12px;
+    color: #bbb;
+}
+
+.slider-container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.prev, .next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}

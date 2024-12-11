@@ -1,0 +1,1654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+
+.description input[type=checkbox]:checked~label { opacity: 1 }
+
+.description .description-text {
+    background-color: rgba(255,255,230,.5);
+    padding-left: 45px;
+    padding-top: 25px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    position: relative;
+    top: -35px;
+    z-index: 4;
+    opacity: 0;
+    -webkit-transition: opacity .2s;
+    -moz-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s;
+    color: rgb(20,20,20);
+}
+
+.description input[type=checkbox]:checked~.description-text { opacity: 1 }
+
+.gallery {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            grid-template-rows: repeat(2, 1fr);
+            grid-gap: 5px;
+            height: 100vh;
+        }
+        
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: background-image 0.3s ease;
+        }
+        /* Первое изображение занимает 2 строки и 1 колонку */
+        
+        .image-container:nth-child(1) {
+            grid-column: 1;
+            grid-row: 1 / span 2;
+            background-image: url('https://p1-ofp.static.pub/ShareResource/la/lenovo/ftv/tech-world-23-homepage-banner-desktop-2.9e7e1511baf1c26c.jpg');
+        }
+        /* Остальные четыре изображения по две колонки и две строки */
+        
+        .image-container:nth-child(2) {
+            grid-column: 2;
+            grid-row: 1;
+            background-image: url('https://p1-ofp.static.pub/ShareResource/la/lenovo/ftv/tech-world-23-homepage-banner-desktop-2.9e7e1511baf1c26c.jpg');
+        }
+        
+        .image-container:nth-child(3) {
+            grid-column: 3;
+            grid-row: 1;
+            background-image: url('https://p1-ofp.static.pub/ShareResource/la/lenovo/ftv/tech-world-23-homepage-banner-desktop-2.9e7e1511baf1c26c.jpg');
+        }
+        
+        .image-container:nth-child(4) {
+            grid-column: 2;
+            grid-row: 2;
+            background-image: url('https://p1-ofp.static.pub/ShareResource/la/lenovo/ftv/tech-world-23-homepage-banner-desktop-2.9e7e1511baf1c26c.jpg');
+        }
+        
+        .image-container:nth-child(5) {
+            grid-column: 3;
+            grid-row: 2;
+            background-image: url('https://p1-ofp.static.pub/ShareResource/la/lenovo/ftv/tech-world-23-homepage-banner-desktop-2.9e7e1511baf1c26c.jpg');
+        }
+        
+        .image-container:nth-child(2):hover {
+            background-image: url('https://topexplorer.ru/layout/top/noutbuki-3.jpg');
+        }
+        
+        .image-container:nth-child(3):hover {
+            background-image: url('https://s0.rbk.ru/v6_top_pics/media/img/1/85/347020275081851.jpeg');
+        }
+        
+        .image-container:nth-child(4):hover {
+            background-image: url('https://static.cnews.ru/img/news/2024/04/24/ser6_700.jpg');
+        }
+        
+        .image-container:nth-child(5):hover {
+            background-image: url('https://media.istockphoto.com/id/1003143004/ru/%D1%84%D0%BE%D1%82%D0%BE/%D0%B8%D1%81%D0%BA%D1%83%D1%81%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D0%B8%D0%BD%D1%82%D0%B5%D0%BB%D0%BB%D0%B5%D0%BA%D1%82-%D0%BE%D0%B1%D0%BE%D0%B8.jpg?s=612x612&w=0&k=20&c=TKENZWih3Qdimpi6sPnxGBIPGI_iPcQODfQ0n_kT_dc');
+        }
+        
+        .image-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.logo {
+    font-size: 0.1rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 1rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero {
+    background: #f4f4f4;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.hero-content h1 {
+    position: right ;
+    font-size: 1.5rem;
+    padding: 0 1rem;
+}
+
+.cta-button {
+    background: #007bff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 0;
+    background: #fff;
+}
+
+.feature-card {
+    background: #f4f4f4;
+    padding: 1rem;
+    border-radius: 5px;
+    width: 30%;
+    text-align: center;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    display: inline;
+    margin: 0 0.5rem;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+}
+.kk{
+    
+  display: block;
+  margin-left: 18cm;
+  
+  width: 50%;
+}
+.kkk{  display: block;
+  margin-left: 30cm;
+ 
+  width: 50%;
+}
+
+
+    .recommend-section {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .recommend-section h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  /* Ensure the button stays at the bottom */
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.card ul li {
+    margin-bottom: 10px;
+}
+
+.card button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: auto;  /* This pushes the button to the bottom */
+}
+
+.card button:hover {
+    background-color: #333;
+}
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      width: 300px;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .card img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .card h3 {
+      font-size: 18px;
+      margin: 15px 0;
+    }
+
+    .card ul {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+    }
+    .card ul li {
+      margin-bottom: 10px;
+    }
+
+    .card button {
+      background-color: #000;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .card button:hover {
+      background-color: #333;
+    }
+
+    /* Базовые стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+/* Мәзір панелі */
+.menu-bar {
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    position: relative;
+    margin-right: 20px;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    font-size: 16px;
+}
+
+.menu li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Мәзір панелі */
+.menu-bar {
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Горизонтальді орналасу */
+}
+
+.menu li {
+    position: relative;
+    margin-right: 20px;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    font-size: 16px;
+}
+
+.menu li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Горизонтальді выпадающий список */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    min-width: 200px; /* Ең аз енін орнату */
+}
+
+.dropdown li {
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown li a {
+    color: white;
+    padding: 10px 20px;
+    display: block;
+    font-size: 14px;
+}
+
+.dropdown li a:hover {
+    background-color: #555;
+}
+
+/* Hover эффект */
+.menu li:hover .dropdown {
+    display: block;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+
+}
+
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slider img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+/* Контейнер мен бөлімнің жалпы стилі */
+.recommend-section {
+    padding: 50px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.recommend-section h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Карточкалар контейнері */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+/* Әрбір карточканың стилі */
+.card {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card h3 {
+    padding: 20px;
+    font-size: 22px;
+    color: #333;
+    margin: 0;
+    font-weight: 500;
+}
+
+.card ul {
+    padding: 0 20px;
+    list-style-type: none;
+    font-size: 16px;
+    color: #555;
+}
+
+.card ul li {
+    margin-bottom: 10px;
+}
+
+/* Кнопканың стилі */
+.card button {
+    
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Кнопканы басқанда өзгеріс */
+.card button:hover {
+    background-color: #0b0c0d;
+    transform: translateY(-2px);
+}
+
+/* Карточканы жүгірту анимациясы */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Контейнер для категории */
+.categories-container {
+    display: flex; /* Категорияларды қатарға орналастыру */
+    justify-content: center; /* Орталау */
+    flex-wrap: wrap; /* Егер орын жетпесе келесі жолға өту */
+    gap: 20px; /* Категориялар арасында арақашықтық */
+    margin: 0 20px;
+}
+
+.category {
+    background-color: #fff;
+    padding: 20px;
+    width: 150px;  /* Категория көлемін өзіңізге лайықтаңыз */
+    height: 150px; /* Категория көлемін өзіңізге лайықтаңыз */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Домалақ форма */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.category:hover {
+    transform: scale(1.05); /* Категорияға жүгірткенде үлкейту әсері */
+}
+
+h2 {
+    color: #333;
+    font-size: 18px;
+}
+
+p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Контейнер для брендтер */
+.brands-container {
+    display: flex; /* Брендтерді қатарға орналастыру */
+    justify-content: center; /* Орталау */
+    gap: 20px; /* Брендтер арасындағы арақашықтық */
+    margin: 20px 0;
+}
+
+/* Квадрат пішінді брендтер */
+.brand {
+    background-color: #fff;
+    padding: 20px;
+    width: 200px;  /* Брендтердің көлемін реттеңіз */
+    height: 200px; /* Брендтердің көлемін реттеңіз */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.brand:hover {
+    transform: scale(1.05); /* Брендке жүгірткенде үлкейту әсері */
+}
+.slider-container {
+            position: relative;
+            width: 100%;
+            max-width: 10000px;
+            margin: 0px auto;
+            overflow: hidden; /* Слайдерден тыс бөлшектерді жасыру */
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            max-width: 100%;
+            flex: 0 0 auto;
+        }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+        }
+
+        button {
+            position: absolute;
+            top: 50%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 100;
+            font-size: 18px;
+            transform: translateY(-50%);
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 300px;
+    text-align: center;
+}
+
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #25D366;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #1eb14a;
+        }
+        .order-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            width: 300px;
+            text-align: center;
+        }
+        input {
+            width: 90%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #FF6600;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #E55A00;
+        }
+        @media (max-width:574px){
+
+        }
+        .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    /* Басқа қажетті стильдер */
+}
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.menu {
+    width: 100%;
+}
+/* General text styling */
+body {
+    font-size: 14px; /* Adjust the value as needed */
+}
+
+/* Specific adjustments for headers */
+h1, h2, h3 {
+    font-size: 1.5em; /* Smaller than default */
+}
+
+/* Text in form inputs */
+input, select, button {
+    font-size: 12px; /* Adjust size of form input text */
+}
+
+/* Adjust the size of paragraphs or other text blocks */
+p {
+    font-size: 13px; /* Adjust the paragraph text size */
+}
+/* Header logo */
+header img {
+    width: 50px; /* Adjust this value to make the logo smaller */
+    height: auto; /* Keep the aspect ratio of the logo */
+}
+
+/* Form elements */
+header form label,
+header form input,
+header form button {
+    font-size: 14px; /* Reduce font size of form elements */
+}
+
+/* Input fields */
+header form input[type="text"],
+header form input[type="submit"] {
+    font-size: 12px; /* Smaller text for input fields */
+    padding: 5px; /* Adjust padding for better spacing */
+}
+
+/* Reduce font size of text in the header */
+header nav {
+    font-size: 14px; /* Decrease font size for text in the header */
+}
+
+/* Make the navigation links smaller */
+header .nav-links li a {
+    font-size: 14px; /* Adjust link size */
+}
+/* Header logo */
+header img {
+    width: 50px; /* Adjust this value to make the logo smaller */
+    height: auto; /* Keep the aspect ratio of the logo */
+}
+
+/* Form elements in the header */
+header form label,
+header form input,
+header form button {
+    font-size: 14px; /* Smaller font size for form elements */
+}
+
+/* Input fields */
+header form input[type="text"],
+header form input[type="submit"] {
+    font-size: 12px; /* Smaller font size for input fields */
+    padding: 5px; /* Adjust padding for better spacing */
+}
+
+/* Navigation menu text */
+header .nav-links {
+    font-size: 14px; /* Make the text of the links smaller */
+}
+
+/* Navigation links */
+header .nav-links li a {
+    font-size: 14px; /* Adjust the font size of navigation links */
+}
+
+/* If you have any text in the header (for example, in a search placeholder) */
+header form input::placeholder {
+    font-size: 12px; /* Smaller placeholder text */
+}
+/* Menu Bar */
+.menu-bar {
+    font-size: 14px; /* Reduce the font size of the entire menu */
+}
+
+/* Menu List */
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Menu Items */
+.menu > li {
+    display: inline-block;
+    position: relative;
+    margin-right: 20px;
+}
+
+/* Menu Links */
+.menu a {
+    text-decoration: none;
+    color: #333; /* Change color as needed */
+    font-size: 14px; /* Reduce the size of the text in the menu */
+    padding: 10px;
+    display: block;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    display: none; /* Hide the dropdown initially */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    padding: 10px 0;
+    border: 1px solid #ccc;
+    font-size: 12px; /* Reduce font size for dropdown items */
+}
+
+/* Dropdown Items */
+.dropdown li {
+    padding: 5px 20px;
+}
+
+/* Show dropdown on hover */
+.menu > li:hover .dropdown {
+    display: block;
+}
+
+/* Images inside the dropdown (make them smaller) */
+.dropdown img {
+    width: 80px; /* Reduce image size */
+    height: auto;
+    margin-top: 5px;
+}
+/* Menu Bar */
+.menu-bar {
+    font-size: 12px; /* Reduce font size for the entire menu */
+}
+
+/* Menu List */
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Menu Items */
+.menu > li {
+    display: inline-block;
+    position: relative;
+    margin-right: 10px; /* Reduce spacing between items */
+}
+
+/* Menu Links */
+.menu a {
+    text-decoration: none;
+    color: #333; /* Color for the links */
+    font-size: 12px; /* Reduce the font size of the menu text */
+    padding: 8px 12px; /* Adjust padding to reduce space */
+    display: block;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    display: none; /* Initially hide the dropdown */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1e1b1b;
+    padding: 8px 0; /* Smaller padding inside the dropdown */
+    border: 1px solid #a32121;
+    font-size: 11px; /* Smaller font size for dropdown items */
+}
+
+/* Dropdown Items */
+.dropdown li {
+    padding: 5px 10px; /* Smaller padding for dropdown items */
+}
+
+/* Show dropdown on hover */
+.menu > li:hover .dropdown {
+    display: block;
+}
+
+/* Images inside the dropdown (smaller size) */
+.dropdown img {
+    width: 60px; /* Make the images smaller */
+    height: auto;
+    margin-top: 5px;
+}
+/* Менюның негізгі контейнері */
+.menu-bar {
+  display: flex; /* Меню элементтерін горизонтальді орналастыру үшін */
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+/* Меню элементтерін горизонтальді орналастыру */
+.menu {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Әрбір меню элементіне стиль */
+.menu li {
+  position: relative; /* Ішкі мәзірді дұрыс орналастыру үшін */
+  margin-right: 20px;
+}
+
+/* Меню сілтемелеріне стиль */
+.menu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
+/* Ішкі мәзір (dropdown) */
+.dropdown {
+  display: none; /* Ішкі мәзір бастапқыда көрінбейді */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #444;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  z-index: 1000;
+}
+
+/* Ішкі мәзірдегі сілтемелер */
+.dropdown li {
+  padding: 10px;
+}
+
+.dropdown li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Ішкі мәзірдің көрінуі */
+.menu li:hover .dropdown {
+  display: block; /* Меню элементін ховерлеу кезінде ашу */
+}
+
+/* Мобильді құрылғыларға арналған стиль */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column; /* Меню элементтерін вертикальді орналастыру */
+  }
+  .menu li {
+    margin-right: 0;
+  }
+}
+/* Менюның негізгі контейнері */
+.menu-bar {
+  display: flex; /* Меню элементтерін бір жолға орналастыру үшін */
+  justify-content: space-between; /* Меню элементтері арасында орын қалдырады */
+  align-items: center; /* Вертикалды туралау */
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+/* Меню элементтерін горизонтальді орналастыру */
+.menu {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Әрбір меню элементіне стиль */
+.menu li {
+  position: relative; /* Ішкі мәзірді дұрыс орналастыру үшін */
+  margin-right: 20px; /* Әрбір элемент арасында орын қалдыру */
+}
+
+/* Меню сілтемелеріне стиль */
+.menu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
+/* Ішкі мәзір (dropdown) */
+.dropdown {
+  display: none; /* Ішкі мәзір бастапқыда көрінбейді */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #444;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  z-index: 1000;
+}
+
+/* Ішкі мәзірдегі сілтемелер */
+.dropdown li {
+  padding: 10px;
+}
+
+.dropdown li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Ішкі мәзірдің көрінуі */
+.menu li:hover .dropdown {
+  display: block; /* Меню элементін ховерлеу кезінде ашу */
+}
+
+/* Мобильді құрылғыларға арналған стиль */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column; /* Меню элементтерін вертикальді орналастыру */
+  }
+  .menu li {
+    margin-right: 0;
+  }
+}
+/* Менюның негізгі контейнері */
+.menu-bar {
+  display: flex; /* Меню элементтерін бір жолға орналастыру үшін */
+  justify-content: space-between; /* Меню элементтері арасында орын қалдырады */
+  align-items: center; /* Вертикалды туралау */
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+/* Меню элементтерін горизонтальді орналастыру */
+.menu {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Әрбір меню элементіне стиль */
+.menu li {
+  position: relative; /* Ішкі мәзірді дұрыс орналастыру үшін */
+  margin-right: 20px; /* Әрбір элемент арасында орын қалдыру */
+}
+
+/* Меню сілтемелеріне стиль */
+.menu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
+/* Ішкі мәзір (dropdown) */
+.dropdown {
+  display: none; /* Ішкі мәзір бастапқыда көрінбейді */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #444;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  z-index: 1000;
+}
+
+/* Ішкі мәзірдегі сілтемелер */
+.dropdown li {
+  padding: 10px;
+}
+
+.dropdown li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Ішкі мәзірдің көрінуі */
+.menu li:hover .dropdown {
+  display: block; /* Меню элементін ховерлеу кезінде ашу */
+}
+
+/* Мобильді құрылғыларға арналған стиль */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column; /* Меню элементтерін вертикальді орналастыру */
+  }
+  .menu li {
+    margin-right: 0;
+  }
+}
+/* Менюның негізгі контейнері */
+.menu-bar {
+  display: flex; /* Меню элементтерін бір жолға орналастыру үшін */
+  justify-content: space-between; /* Меню элементтері арасында орын қалдырады */
+  align-items: center; /* Вертикалды туралау */
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+/* Меню элементтерін горизонтальді орналастыру */
+.menu {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Әрбір меню элементіне стиль */
+.menu li {
+  position: relative; /* Ішкі мәзірді дұрыс орналастыру үшін */
+  margin-right: 20px; /* Әрбір элемент арасында орын қалдыру */
+}
+
+/* Меню сілтемелеріне стиль */
+.menu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
+/* Ішкі мәзір (dropdown) */
+.dropdown {
+  display: none; /* Ішкі мәзір бастапқыда көрінбейді */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #444;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  z-index: 1000;
+}
+
+/* Ішкі мәзірдегі сілтемелер */
+.dropdown li {
+  padding: 10px;
+}
+
+.dropdown li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Ішкі мәзірдің көрінуі */
+.menu li:hover .dropdown {
+  display: block; /* Меню элементін ховерлеу кезінде ашу */
+}
+
+/* Мобильді құрылғыларға арналған стиль */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column; /* Меню элементтерін вертикальді орналастыру */
+  }
+  .menu li {
+    margin-right: 0;
+  }
+}
+/* Менюның негізгі контейнері */
+.menu-bar {
+  display: flex; /* Меню элементтерін бір жолға орналастыру үшін */
+  justify-content: space-between; /* Меню элементтері арасында орын қалдырады */
+  align-items: center; /* Вертикалды туралау */
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+/* Меню элементтерін горизонтальді орналастыру */
+.menu {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Әрбір меню элементіне стиль */
+.menu li {
+  position: relative; /* Ішкі мәзірді дұрыс орналастыру үшін */
+  margin-right: 20px; /* Әрбір элемент арасында орын қалдыру */
+}
+
+/* Меню сілтемелеріне стиль */
+.menu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
+/* Ішкі мәзір (dropdown) */
+.dropdown {
+  display: none; /* Ішкі мәзір бастапқыда көрінбейді */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #444;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  z-index: 1000;
+}
+
+/* Ішкі мәзірдегі сілтемелер */
+.dropdown li {
+  padding: 10px;
+}
+
+.dropdown li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Ішкі мәзірдің көрінуі */
+.menu li:hover .dropdown {
+  display: block; /* Меню элементін ховерлеу кезінде ашу */
+}
+
+/* Мобильді құрылғыларға арналған стиль */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column; /* Меню элементтерін вертикальді орналастыру */
+  }
+  .menu li {
+    margin-right: 0;
+  }
+}
+
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Site</title>
+   
+</head>
+<body>
+    <header>
+        <nav>
+        <img src="https://p4-ofp.static.pub/fes/cms/2022/11/14/h82es5y402b4rh1089sf86ay7n9sdl721044.png" weight="5",height="25">
+        <form action="/search" method="get">
+            <label for="searchQuery">Search:</label>
+            <input type="text" id="searchQuery" name="q" placeholder="Что вы ишите сегодния?" required>
+            <input type="submit" value="Search">
+        </form>
+
+            <ul class="nav-links">
+                <li><a href="Сож.html">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <div class="menu-bar">
+        <ul class="menu">
+            <li>
+                <a href="#">Ноутбуки</a>
+                <ul class="dropdown">
+                    <li><a href="#">Для работы</a></li>
+                    <li><a href="#">Для учебы</a></li>
+                    <li><a href="#">Для игр</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Десктопы</a>
+                <ul class="dropdown">
+                    <li><a href="#">ThinkCentre</a></li>
+                    <li><a href="#">IdeaCentre</a></li>
+                    <li><a href="#">Legion</a></li>
+                    <li><img src="legion-desktop.avif" alt=""></li> <li><img src="ThinkCentre.webp" alt=""></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Планшеты</a>
+                <ul class="dropdown">
+                    <li><a href="#">Android</a></li>
+                    <li><a href="#">Windows</a></li>
+                    <li><a href="#">iOS</a></li>
+                </ul>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="slider-container">
+       
+        <div class="slider">
+            <div class="slide">
+                <img src="lenovo-thinkpad-t14s-gen-6-14-qualcomm-hpb-desktop.avif" alt="Слайд 1">
+            </div>
+            <div class="slide">
+                <img src="lenovo-legion-pro-7i-gen-9.avif" alt="Слайд 2">
+            </div>
+            <div class="slide">
+                <img src="lenovo-yoga-slim-7i-gen-9-aura-edition-15-intel-hpb-desktop (1).webp" alt="Слайд 3">
+            </div>
+        </div>
+        <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span>
+        <!-- Стрелки -->
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll(".slide");
+            const totalSlides = slides.length;
+
+            if (index >= totalSlides) {
+                slideIndex = 0;
+            } else if (index < 0) {
+                slideIndex = totalSlides - 1;
+            } else {
+                slideIndex = index;
+            }
+
+            const slider = document.querySelector(".slider");
+            slider.style.transform = `translateX(-${slideIndex * 100}%)`;
+        }
+
+        function moveSlide(step) {
+            showSlide(slideIndex + step);
+        }
+
+        // Автоматты түрде слайдтарды ауыстыру
+        setInterval(function() {
+            moveSlide(1);
+        }, 5000); // 3 секунд сайын слайд ауысатын болады
+
+        showSlide(slideIndex); // Бастапқы слайдты көрсету
+    </script>
+
+<section>
+    <div class="container">
+        <div class="row">
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="w-100"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+        </div>
+      </div>
+    <div class="gallery">
+        <div class="image-container">
+            
+           <div class="image-text">Технологии будущего для всех. Станьте свидетелем того, как технологии Lenovo преображают мир.</div>
+           
+        </div></a>
+
+        <div class="image-container">
+           <a href="Electric Cars, Solar & Clean Energy _ Tesla.html"> <div class="image-text">Настольные ПК и ноутбуки</div></a>
+        </div>
+
+        <div class="image-container">
+            <a href="iphone.html"><div class="image-text">Смартфоны Moto</div></a>
+        </div>
+
+        <div class="image-container">
+            <a href="Tesla.html"><div class="image-text">Серверы и СХД</div></a>
+        </div>
+
+        <div class="image-container">
+           <a href="12.html"> <div class="image-text">Услуги и Решения</div></a>
+        </div>
+    </div> </section>
+
+
+    <div class="kk">
+<img src="https://p2-ofp.static.pub/ShareResource/we/footer-social-icons/icon-footer-facebook.svg" alt="">
+<img src="https://p4-ofp.static.pub/ShareResource/na/footer/social-medial-icons/lenovo-x-30-alternate-med.svg" alt="">
+<img src="https://p4-ofp.static.pub/ShareResource/na/footer/social-medial-icons/lenovo-instagram-30-alternate-med.svg" alt=""> 
+<img src="https://p4-ofp.static.pub/ShareResource/na/footer/social-medial-icons/lenovo-youtube-30-alternate-med.svg" alt=""> </div>
+<div class="kkk"><form action="/submit" method="post">
+    <label for="fruits">
+        Country
+    </label>
+    <select id="fruits" name="fruits">
+        <option value="apple">Mongolia</option>
+        <option value="banana">Kazakhstan</option>
+        <option value="orange">America</option>
+        <option value="grape">China</option>
+        <option value="mango">Russia</option>
+    </select></div>
+    <br><br>
+    <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Продукты</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Категории продуктов</h1>
+
+    <div class="categories-container">
+
+        <div class="category">
+            <h2>Ноутбуки</h2>
+            <img src="lenovo-laptop-icon.svg" alt="">
+        </div>
+
+        <div class="category">
+            <h2>Десктопы</h2>
+            <img src="lenovo-desktop-icon.svg" alt="">
+        </div>
+
+        <div class="category">
+            <h2>Станции</h2>
+           <img src="lenovo-workstations-icon.svg" alt="">
+        </div>
+
+        <div class="category">
+            <h2>Планшеты</h2>
+            <img src="lenovo-tablet-and-phones-icon.svg" alt="">
+        </div>
+
+        <div class="category">
+            <h2>Мониторы</h2>
+           <img src="lenovo-monitor-icon.svg" alt="">
+        </div>
+
+        <div class="category">
+            <h2>Аксессуары</h2>
+            <img src="lenovo-accessories-icon.svg" alt="">
+        </div>
+
+        <div class="category">
+            <h2>Умные Устройства</h2>
+           <img src="lenovo-smart-device-icon-pc.svg" alt="">
+        </div>
+
+    </div>
+
+    
+
+
+    </div>
+</body>
+</html>
+
+    <section class="recommend-section">
+        <h1>Рекомендуем</h1>
+        <div class="card-container">
+            <div class="card">
+                <img src="1.avif" alt="Ноутбук ThinkPad X1">
+                <h3>Ноутбук ThinkPad X1 <br> (2-в-1, 9th Gen, 14, Intel)</h3>
+                <ul>
+                    <li>Все в одном: 14-дюймовый ноутбук, планшет и блокнот.</li>
+                    <li>Выполнение ресурсоемких задач даже без подключения к электросети.</li>
+                    <li>Идеальный выбор для профессионалов.</li>
+                    <a href="https://www.lenovo.com/kz/ru/p/laptops/thinkpad/thinkpadx1/lenovo-thinkpad-x1-2-in-1-gen-9-14-inch-intel/len101t0085">Подробнее</a>
+                </ul>
+               
+            </div>
+            <div class="card">
+                <img src="2.avif" alt="Ноутбук ThinkPad T14s">
+                <h3>Ноутбук ThinkPad T14s <br> (6th Gen, 14, Snapdragon)</h3>
+                <ul>
+                    <li>Ведущий в отрасли ноутбук стандарта Copilot+PC для бизнеса.</li>
+                    <li>Передовые средства безопасности корпоративного класса.</li>
+                    <li>Автономная работа до нескольких дней.</li>
+                <a href="https://www.lenovo.com/kz/ru/p/laptops/thinkpad/thinkpadt/lenovo-thinkpad-t14s-gen-6-14-inch-snapdragon/len101t0099">Подробнее</a>
+                </ul>
+             
+            </div>
+            <div class="card">
+                <img src="3.webp" alt="Ноутбук Yoga Pro 9i">
+                <h3>Ноутбук Yoga Pro 9i <br> (9th Gen, 16, Intel)</h3>
+                <ul>
+                    <li>Стильный 16-дюймовый ноутбук для творческих профессионалов.</li>
+                    <li>Поддержка технологии ИИ для оптимальной производительности.</li>
+                    <li>Фантастическое качество изображения.</li>
+                    <a href="">Подробнее</a>
+                </ul>
+                
+            </div>
+            <div class="card">
+                <img src="4.avif" alt="Игровой ноутбук Legion Pro 5i">
+                <h3>Игровой ноутбук Legion Pro 5i <br> (9th Gen, 16, Intel)</h3>
+                <ul>
+                    <li>Преимущество с системой Lenovo AI Engine+.</li>
+                    <li>Процессоры Intel® Core™ и NVIDIA® GeForce RTX™.</li>
+                    <li>Технология охлаждения Legion ColdFront 5.0.</li>
+                    <a href="">Подробнее</a>
+                </ul>
+                
+            </div>
+        </div>
+    </section>
+    
+<p>Lenovo Group Limited, trading as Lenovo (/ləˈnoʊvoʊ/ lə-NOH-voh, Chinese: 联想; pinyin: Liánxiǎng), is a Chinese[9] multinational technology company specializing in designing, manufacturing, and marketing consumer electronics, personal computers, software, business solutions, and related services.[5] Products manufactured by the company include desktop computers, laptops, tablet computers, smartphones, workstations, servers, supercomputers, data storage devices, IT management software, and smart televisions. Its best-known brands include its ThinkPad business line of laptop computers (acquired from IBM), the IdeaPad, Yoga, LOQ, and Legion consumer lines of laptop computers, and the IdeaCentre, LOQ, Legion, and ThinkCentre lines of desktop computers. As of 2024, Lenovo is the world's largest personal computer vendor by unit sales.[10]
+
+    Lenovo has operations in over 60 countries,[11] and sells its products in around 180 countries.[12] It was incorporated in Hong Kong,[2] with global headquarters in Beijing, and Morrisville, North Carolina, United States.[3][4] It has research centers in Beijing, Chengdu, Yamato (Kanagawa Prefecture, Japan), Singapore, Shanghai, Shenzhen, and Morrisville,[5] and also has Lenovo NEC Holdings, a joint venture with NEC that produces personal computers for the Japanese market.
+    
+    History
+    1984–1993: Founding and early history
+    Lenovo was founded in Beijing on 1 November 1984 as Legend by a team of engineers led by Liu Chuanzhi and Danny Lui. Initially specializing in televisions, the company migrated towards manufacturing and marketing computers.
+    
+</p>
+<section>
+</div>
+
+
+
+
+
+
+
+
+
+<script>
+    document.getElementById('payButton').addEventListener('click', function() {
+        const name = document.getElementById('name').value.trim();
+        const product = document.getElementById('product').value.trim();
+        const price = document.getElementById('price').value.trim();
+
+        if (name === "" || product === "" || price === "" || price <= 0) {
+            alert("Барлық өрістерді дұрыс толтырыңыз!");
+            return;
+        }
+
+        // Kaspi.kz төлем бетіне сілтеме (87055441039 нөміріне)
+        const kaspiURL = `https://kaspi.kz/transfer/87055441039`;
+
+        // Клиентті Kaspi.kz төлем бетіне бағыттау
+        window.open(kaspiURL, '_blank'); // Жаңа терезеде ашады
+    });
+</script>
+<script>function adjustSlider() {
+    const slider = document.querySelector('.slider'); // Слайдерді таңдаңыз
+    const screenWidth = window.innerWidth; // Терезенің ағымдағы ені
+
+    if (screenWidth <= 574) {
+        slider.style.transform = 'translateX(-50%)'; // 574px немесе кішірек экран үшін
+    } else {
+        slider.style.transform = 'translateX(-100%)'; // Үлкен экран үшін
+    }
+}
+
+// Терезе өлшемін өзгерткен кезде оқиғаны бақылау
+window.addEventListener('resize', adjustSlider);
+
+// Браузер ашылғанда автоматты түрде шақыру
+adjustSlider();
+</script>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Example Company</p>
+            <ul class="footer-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        
+    </footer>
+</section>
+</body>
+</html>

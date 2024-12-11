@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lenovo - Technology Redefined</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Lenovo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel -->
+    <div id="lenovoCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#lenovoCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#lenovoCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#lenovoCarousel" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="Lenovo1.jpg" class="d-block w-100" alt="Laptop 1">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Innovative Laptops</h5>
+                    <p>Powerful and reliable for all your needs.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="best-lenovo-laptops-20241010-medium.jpg" class="d-block w-100" alt="Laptop 2">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Next-Gen Tablets</h5>
+                    <p>Designed for work and play on the go.</p>
+                </div></div>
+                <div class="carousel-item">
+                    <img src="ufrspg0nb2n6uoqchveeev4h5qe59c391279.avif" class="d-block w-100" alt="Laptop 3">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Smart Accessories</h5>
+                        <p>Enhance your experience with Lenovo accessories.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#lenovoCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#lenovoCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    
+        <!-- About Section -->
+        <section id="about" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center">About Lenovo</h2>
+                <p class="text-center">Lenovo is a global technology leader manufacturing innovative devices including laptops, tablets, and smart accessories. Our goal is to redefine technology for a smarter tomorrow.</p>
+            </div>
+        </section>
+    
+        <!-- Products Section -->
+        <section id="products" class="py-5">
+            <div class="container">
+                <h2 class="text-center">Our Products</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="1.jpeg" class="card-img-top" alt="Laptop">
+                            <div class="card-body">
+                                <h5 class="card-title">Laptops</h5>
+                                <p class="card-text">High-performance laptops for personal and professional use.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="images.jpeg" class="card-img-top" alt="Tablet"><div class="card-body">
+                                <h5 class="card-title">Tablets</h5>
+                                <p class="card-text">Portable tablets for entertainment and productivity.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="Lenovo_new_laptaps_01.jpg" class="card-img-top" alt="Accessories">
+                            <div class="card-body">
+                                <h5 class="card-title">Accessories</h5>
+                                <p class="card-text">Enhance your devices with our innovative accessories.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Contact Section -->
+        <section id="contact" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center">Contact Us</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="4" placeholder="Write your message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </section>
+    
+        <!-- Footer -->
+        <footer class="bg-dark text-white py-4">
+            <div class="container text-center"><p>&copy; 2024 Lenovo. All rights reserved.</p>
+            </div>
+        </footer>
+    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+    </html>
